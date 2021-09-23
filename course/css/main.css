@@ -1,0 +1,127 @@
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: #292d3e;
+    background: linear-gradient(90deg, #292d3e 66%, #1c272a 66%);
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 66% 34%;
+}
+
+h1 {
+    background-color: #161b31;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #454b65;
+    margin: 0;
+    padding: 0 1rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+h1 small {
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.col.code {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position: relative;
+}
+
+.col.code pre.pre {
+    background-color: transparent;
+    position: absolute;
+    padding-top: 0;
+    margin: 0;
+    left: -100px;
+    width: calc(100% + 80px);
+}
+
+.col.log {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.col.log #log {
+    font-size: 1rem;
+    color: #dedec0;
+    padding: 1.5rem;
+}
+
+.error {
+    color: red;
+}
+
+.circularobject {
+    color: #4d6378;
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* RESET */
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+
+ol[class],
+ul[class] {
+    padding: 0
+}
+
+blockquote,
+body,
+dd,
+dl,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+h4,
+li,
+ol[class],
+p,
+ul[class] {
+    margin: 0
+}
+
+ol[class],
+ul[class] {
+    list-style: none
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit
+}
+
+@media (prefers-reduced-motion:reduce) {
+    * {
+        animation-duration: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0s !important;
+        scroll-behavior: auto !important
+    }
+}
