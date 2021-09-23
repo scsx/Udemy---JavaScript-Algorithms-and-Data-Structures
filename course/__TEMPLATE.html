@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="__css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="__css/vendor/prism.css" />
+        <link rel="stylesheet" href="__css/main.css" />
+        <title>Document</title>
+        <script type="text/javascript" src="__js/vendor/prism.js"></script>
+        <script type="text/javascript" src="__js/log.js"></script>
+    </head>
+    <body>
+            <h1 id="h1"></h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <pre><code class="language-javascript" id='js'></code></pre>
+                </div>
+                <div class="col">
+                    <div id="log"></div>
+                </div>
+            </div>
+        </div>
+
+        <script id="tag">
+            var x = 1
+            log('Entering the loop<br /> ')
+
+            while (x < 20) {
+                if (x == 5) {
+                    break
+                }
+                x = x + 1
+                //log(x)
+                log('document.write("Entering the loop ")')
+            }
+            log('Exiting the loop!')
+
+            let sfsadad = {
+                one: 1,
+                jbndvj: 565436
+            }
+            log('(x < 20)')
+
+            function addUpTo(n) {
+                let total = 0
+                for (let i = 1; i <= n; i++) {
+                    total += i
+                }
+                return total
+            }
+
+            var t1 = performance.now()
+            addUpTo(1000000000)
+            var t2 = performance.now()
+            log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`)
+        </script>
+        <script type="text/javascript" src="__js/write-js.js"></script>
+    </body>
+</html>

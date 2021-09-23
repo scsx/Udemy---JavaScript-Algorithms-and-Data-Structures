@@ -1,0 +1,26 @@
+body {
+    background-color: #252525;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+h1 {
+    background-color: #161b31;
+    font-weight: 700;
+    font-size: 4rem;
+    color: #454b65;
+    margin: 0;
+    padding: 0 0 .5rem 0;
+}
+
+#log {
+    font-size: 1.25rem;
+    background-color: #292d3e;
+    color: #dedec0;
+    padding: 1rem;
+}
+
+pre[class*="language-"] {
+    padding: 1em;
+    margin: 0 0 .5em 0;
+    overflow: auto;
+}
