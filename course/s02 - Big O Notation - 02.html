@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/vendor/prism.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Document</title>
+        <script type="text/javascript" src="js/vendor/prism.js"></script>
+        <script type="text/javascript" src="js/log.js"></script>
+    </head>
+    <body>
+        <div class="grid">
+            <h1>
+                <span id="h1"></span>
+                <small>Official Intro to Big O</small>
+            </h1>
+            <div class="col code">
+                <pre
+                    class="pre"
+                ><code class="language-javascript" id='js'></code></pre>
+            </div>
+            <div class="col log">
+                <div id="log"></div>
+            </div>
+        </div>
+
+        <script id="mainscript">
+            try {
+                // CODE
+
+                function printAllPairs(n) {
+                    for (var i = 0; i < n; i++) {
+                        for (var j = 0; j < n; j++) {
+                            log(`${i} ${j}`)
+                        }
+                    }
+                }
+                console.time('printAllPairs')
+                printAllPairs(5)
+                console.timeEnd('printAllPairs')
+
+                // CODE
+            } catch (err) {
+                const logger = document.getElementById('log')
+                logger.innerHTML += `<span class='error'>${err}</span>`
+            }
+        </script>
+        <script type="text/javascript" src="js/write-js.js"></script>
+    </body>
+</html>
