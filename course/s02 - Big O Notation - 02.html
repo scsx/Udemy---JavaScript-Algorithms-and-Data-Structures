@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/vendor/prism.css" />
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="css/favicon.ico" />
         <title>Document</title>
         <script type="text/javascript" src="js/vendor/prism.js"></script>
         <script type="text/javascript" src="js/log.js"></script>
@@ -38,9 +39,16 @@
                     }
                 }
                 console.time('printAllPairs')
-                printAllPairs(5)
+                printAllPairs(2)
                 console.timeEnd('printAllPairs')
 
+                const logAtleast5 = (n) => {
+                    for (let i = 1; i <= Math.max(5, n); i++) {
+                        log(i)
+                    }
+                }
+                log('logAtleast5')
+                logAtleast5(7)
                 // CODE
             } catch (err) {
                 const logger = document.getElementById('log')

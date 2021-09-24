@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/vendor/prism.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="css/favicon.ico" />
+        <title>Document</title>
+        <script type="text/javascript" src="js/vendor/prism.js"></script>
+        <script type="text/javascript" src="js/log.js"></script>
+    </head>
+    <body>
+        <div class="grid">
+            <h1>
+                <span id="h1"></span>
+                <small>Space (memory usage)</small>
+            </h1>
+            <div class="col code">
+                <pre
+                    class="pre"
+                ><code class="language-javascript" id='js'></code></pre>
+            </div>
+            <div class="col log">
+                <div id="log"></div>
+            </div>
+        </div>
+
+        <script id="mainscript">
+            try {
+                // CODE
+
+                // O(1)
+                function sum(arr) {
+                    let total = 0
+                    for (let i = 0; i < arr.length; i++) {
+                        total += arr[i]
+                    }
+                    return total
+                }
+
+                log('sum([1,2,3]): ' + sum([1, 2, 3]))
+
+                // O(n)
+                function double(arr) {
+                    let newArr = []
+                    for (let i = 0; i < arr.length; i++) {
+                        newArr.push(2 * arr[i])
+                    }
+                    return newArr
+                }
+                log('double([1,2,3]): ' + double([1, 2, 3]))
+                log(double([1, 2, 3]))
+
+                // function from https://stackoverflow.com/questions/4905861/memory-usage-of-different-data-types-in-javascript
+                function getByteCount(s) {
+                    let count = 0,
+                        stringLength = s.length,
+                        i
+                    s = String(s || '')
+                    for (i = 0; i < stringLength; i++) {
+                        var partCount = encodeURI(s[i]).split('%').length
+                        count += partCount == 1 ? 1 : partCount - 1
+                    }
+                    return count
+                }
+                log(getByteCount('i♥js')) // 6 bytes
+                log(getByteCount('abcd')) // 4 bytes
+                log(
+                    getByteCount(
+                        'PHP: Recursive acronym meaning Hypertext Preprocessor'
+                    )
+                ) // 53 bytes
+
+                // CODE
+            } catch (err) {
+                const logger = document.getElementById('log')
+                logger.innerHTML += `<span class='error'>${err}</span>`
+            }
+        </script>
+        <script type="text/javascript" src="js/write-js.js"></script>
+    </body>
+</html>

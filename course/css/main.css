@@ -61,8 +61,14 @@ h1 small {
     color: red;
 }
 
-.circularobject {
+small.circularobject {
     color: #4d6378;
+    font-style: italic;
+    font-size: 13px;
+}
+
+small.info {
+    color: #7382c2;
     font-style: italic;
     font-size: 13px;
 }
