@@ -31,6 +31,7 @@
             try {
                 // CODE
 
+                log('Objects')
                 let guy = {
                     name: 'John',
                     lastName: 'Johnson',
@@ -38,6 +39,15 @@
                 }
 
                 log(Object.keys(guy))
+                log(' ')
+                log(Object.entries(guy))
+                log(' ')
+                log(guy.hasOwnProperty('name'))
+
+                log('Arrays')
+                let names = ['Michael', 'Melissa', 'Andrea']
+                let values = [true, {}, [], 2, 'awesome']
+                log(names.concat(values))
 
                 // CODE
             } catch (err) {
